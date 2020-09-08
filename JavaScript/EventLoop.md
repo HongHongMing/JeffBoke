@@ -71,7 +71,7 @@ console.log("global1");
 ```
 
 **首先，事件循环从宏任务队列开始，最开始的时候，宏任务队列中，只有一个 script(整体代码)任务。每一个任务的执行顺序，都依靠函数调用栈来搞定，就是自上到下，而当遇到任务源时，则会先分发任务到对应的队列中去，所以，上面例子的第一步执行如下图所示。**
-![![image](http://mmbiz.qpic.cn/mmbiz_png/zPh0erYjkib3g6TGY1YsxUKkCPmA1grtXGvc26P4oIpmiaZY1MvzOE0Eic04ZamK7CQA7rsPOFIPcD14Sc9KA1fuQ/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)](https://note.youdao.com/yws/public/resource/fc4ecb3e3f97270f2433e9abd6ced35c/xmlnote/2AD8E0828580487889C60E51BF6F2C31/4555)
+![![image](http://mmbiz.qpic.cn/mmbiz_png/zPh0erYjkib3g6TGY1YsxUKkCPmA1grtXGvc26P4oIpmiaZY1MvzOE0Eic04ZamK7CQA7rsPOFIPcD14Sc9KA1fuQ/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)](https://github.com/HongHongMing/Images/blob/master/20200908170620.png?raw=true)
 首先 script 任务开始执行，全局上下文入栈
 
 **第二步：script 任务执行时首先遇到了 setTimeout，setTimeout 为一个宏任务源，那么他的作用就是将任务分发到它对应的队列中。**
@@ -89,7 +89,7 @@ setTimeout(function(){
 
 **因此，构造函数执行时，里面的参数进入函数调用栈执行。for 循环不会进入任何队列，因此代码会依次执行，所以这里的 promise1 和 promise2 会依次输出**
 
-![image](https://note.youdao.com/yws/public/resource/fc4ecb3e3f97270f2433e9abd6ced35c/xmlnote/ADF97887F74A448EBDE3B0226B42F69B/4575)
+![image](![](https://raw.githubusercontent.com/HongHongMing/Images/master/20200908172027.png)
 resolve 在 for 循环中入栈执行
 
 ![image](https://note.youdao.com/yws/public/resource/fc4ecb3e3f97270f2433e9abd6ced35c/xmlnote/A6DD0810BBAE47958F6FF7B97E808C13/4581)
